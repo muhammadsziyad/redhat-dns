@@ -1,6 +1,20 @@
 
 # DNS Server Setup on RHEL
 
+```mermaid
+flowchart LR
+    A[Start: Install RHEL] --> B[Install BIND]
+    B --> C[Configure DNS Zones]
+    C --> D[Create Forward Zone File]
+    C --> E[Create Reverse Zone File]
+    D --> F[Set Permissions]
+    E --> F[Set Permissions]
+    F --> G[Start & Enable BIND Service]
+    G --> H[Configure Firewall for DNS]
+    H --> I[Test DNS Server]
+    I --> J[End]
+```
+
 ## Project Overview
 This project involves setting up and configuring a Domain Name System (DNS) server using **BIND** on Red 
 Hat Enterprise Linux (RHEL). The DNS server will provide forward and reverse DNS lookups for internal 
